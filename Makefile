@@ -1,2 +1,2 @@
 make:
-	gcc arp.c -o arp -lnet -lpcap 
+	gcc arp.c -o arp -lnet -lpcap -pthread 

@@ -62,7 +62,7 @@ check_packet(u_char* args, const struct pcap_pkthdr* header, const u_char* packe
                 end = 1;
                 printf("Physical address of %s is:\n",inet_ntoa(dst_ip));
                 for(i = 0; i < 6; i++)
-                    printf("%02x.", arp->tha[i]);
+                    printf("%02x.", arp->sha[i]);
                 puts("");
                 pcap_breakloop(handle); 
             }
