@@ -133,7 +133,7 @@ main(int argc, char* argv[]) {
         fprintf(stderr, "MAC address error\n");
         exit(EXIT_FAILURE);
     }
-    if ((context = libnet_init(LIBNET_LINK, "en0", libnet_err_buff)) == NULL) {
+    if ((context = libnet_init(LIBNET_LINK, device, libnet_err_buff)) == NULL) {
         fprintf(stderr, "Failed: %s", libnet_err_buff);
         exit(EXIT_FAILURE);
     } 
