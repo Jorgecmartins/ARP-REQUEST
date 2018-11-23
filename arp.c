@@ -118,6 +118,10 @@ main(int argc, char* argv[]) {
     char libnet_err_buff[LIBNET_ERRBUF_SIZE];
     int r;
 
+    if (argc < 3) {
+        fprintf(stderr, "Usage: sudo ./arp <target ip> <interface>\n");
+        exit(EXIT_FAILURE);
+    }
     //    Initialize libnet
     device = argv[2];
 
